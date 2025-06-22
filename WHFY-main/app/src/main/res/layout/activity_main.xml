@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/barrier2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left"
+        tools:layout_editor_absoluteX="411dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="-36dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="115dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="164dp"
+        android:background="@drawable/shape_for_circle_button"
+        android:onClick="bulb_on_off"
+        android:text="ON\nOFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="373dp"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingLeft="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/button_bridge"
+        app:layout_constraintVertical_bias="0.239"
+        tools:layout_editor_absoluteX="19dp">
+
+        <RadioButton
+            android:id="@+id/rg_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="radioButtonClick"
+            android:text="전구 1"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rg_btn2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="radioButtonClick"
+            android:text="전구 2"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rg_btn3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="radioButtonClick"
+            android:text="전구 3"
+            android:textAlignment="center"
+            android:textStyle="bold" />
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="20dp" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="392dp"
+        android:layout_height="62dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.508">
+
+        <Button
+            android:id="@+id/buttonred"
+            android:layout_width="38dp"
+            android:layout_height="59dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FF0000"
+            android:onClick="bulb_color"
+            android:text="RED"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="29dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <Button
+            android:id="@+id/buttonorange"
+            android:layout_width="38dp"
+            android:layout_height="59dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#FFA500"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="bulb_color"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="ORANGE"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="170dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <Button
+            android:id="@+id/buttongreen"
+            android:layout_width="38dp"
+            android:layout_height="59dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#008000"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="bulb_color"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="GREEN"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="239dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <Button
+            android:id="@+id/buttonblue"
+            android:layout_width="38dp"
+            android:layout_height="59dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#0067A3"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="bulb_color"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="BLUE"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="313dp"
+            tools:layout_editor_absoluteY="376dp" />
+
+        <Button
+            android:id="@+id/buttonpupple"
+            android:layout_width="38dp"
+            android:layout_height="59dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="#8B00FF"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:onClick="bulb_color"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="PUPPLE"
+            android:textSize="12sp"
+            tools:layout_editor_absoluteX="98dp"
+            tools:layout_editor_absoluteY="376dp" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="57dp"
+        android:layout_height="63dp"
+        android:onClick="Alloff_button"
+        android:text="O"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.824"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.491" />
+
+    <Button
+        android:id="@+id/button_bridge"
+        android:layout_width="43dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="28dp"
+        android:onClick="bridge_connect"
+        android:text="C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.942"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="290dp"
+        android:layout_height="45dp"
+        android:text="Hue Bridge Connection"
+        android:textAlignment="center"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup"
+        app:layout_constraintEnd_toStartOf="@+id/button_bridge"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.304" />
+
+    <LinearLayout
+        android:id="@+id/recordLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" >
+
+        <ImageButton
+            android:id="@+id/audioRecordImageBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:src="@drawable/ic_baseline_mic_24" />
+
+        <TextView
+            android:id="@+id/audioRecordText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="녹음 시작"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
